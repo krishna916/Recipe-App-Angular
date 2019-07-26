@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Deploy to Github pages
 
 1 - npm install -g angular-cli-ghpages
-2 - ng build --prod --aot --base-href "recipe-app/"
+2 - ng build --prod --aot --base-href "/recipe-app/"
 3 - ngh --dir dist/RecipeApp
 
 third step will push code to ghpages branch and deploy to https://krishna916.github.io/recipe-app/
