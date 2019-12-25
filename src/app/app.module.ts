@@ -9,7 +9,11 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AuthModule } from './auth/auth.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
-
+import { StoreModule } from '@ngrx/store';
+import { shoppingListReducer } from './shopping-list/store/shopping-list.reducers';
+import { reducers } from './store/app.reducers'
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './auth/store/auth.effect';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,9 @@ import { CoreModule } from './core/core.module';
     AuthModule,
     SharedModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([AuthEffects])
   ],
   bootstrap: [AppComponent]
 })
