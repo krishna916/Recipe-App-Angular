@@ -16,7 +16,9 @@ export class ShoppingListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("second test");
     console.log("testing commits from intellij");
+    console.log("test third");
   }
 
 }
